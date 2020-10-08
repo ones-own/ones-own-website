@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "prettier '**/*.{css,html,js,md,yml}' --check --ignore-path .gitignore",
+    "format": "prettier '**/*.{css,html,js,md,yml}' --write --ignore-path .gitignore"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
+}
