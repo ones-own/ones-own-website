@@ -3,27 +3,87 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lightening fast websites
+    built to last"
+    />
     <title>One's own</title>
     <style>
+      @font-face {
+        font-family: "Ariata";
+        src: url("ariata.woff2") format("woff2");
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Hoefler";
+        src: url("hoefler.woff2") format("woff2");
+        font-weight: normal;
+        font-style: italic;
+        font-display: swap;
+      }
+
       :root {
-        --bg: hsl(50deg 54% 87%);
-        --text: hsl(50deg 54% 87%);
-        --evelated-one: hsl(50deg 22% 26%);
-        --evelated-two: hsl(50deg 15% 33%);
+        --cream-hs: 50deg 52%;
+        --cream-80: hsl(var(--cream-hs) 80%);
+        --cream-90: hsl(var(--cream-hs) 90%);
+        --cream-94: hsl(var(--cream-hs) 94%);
+
+        --brown-hs: 50deg 22%;
+        --brown-22: hsl(var(--brown-hs) 22%);
+        --brown-26: hsl(var(--brown-hs) 26%);
+        --brown-36: hsl(var(--brown-hs) 36%);
+
+        --green-hs: 150deg 26%;
+        --green-22: hsl(var(--green-hs) 22%);
+        --green-26: hsl(var(--green-hs) 26%);
+        --green-36: hsl(var(--green-hs) 36%);
+
+        --background: var(--cream-90);
+        --text: var(--brown-26);
+        --accent: var(--brown-42);
+        --separator: var(--brown-72);
+        --evelated: var(--cream-94);
+
+        font-size: 93.75%;
       }
 
       @media (prefers-color-scheme: dark) {
         :root {
-          --bg: hsl(150deg 23% 23%);
-          --evelated-one: hsl(150deg 11% 38%);
-          --evelated-two: hsl(150deg 15% 31%);
+          --background: var(--green-26);
+          --text: var(--cream-90);
+          --accent: var(--cream-80);
+          --separator: var(--green-36);
+          --evelated: var(--green-22);
+        }
+      }
+
+      @media (min-width: 36rem) {
+        :root {
+          font-size: 100%;
+        }
+      }
+
+      @media (min-width: 40rem) {
+        :root {
+          font-size: 106.25%;
+        }
+      }
+
+      @media (min-width: 44rem) {
+        :root {
+          font-size: 112.5%;
         }
       }
 
       html {
-        background: var(--bg);
+        background: var(--background);
         color: var(--text);
         display: grid;
+        font-family: Georgia, "Times New Roman", Times, serif;
         justify-content: center;
         align-content: center;
         height: 100vh;
@@ -31,23 +91,39 @@
 
       h1 {
         display: flex;
+        justify-content: center;
       }
 
       svg {
         display: block;
       }
 
-      span {
-        background: var(--evelated-one);
-        padding: 0.5rem 1rem 0.75rem;
+      h1 span {
+        background: var(--text);
+        color: var(--background);
+        padding: 0.75rem 1rem;
       }
 
-      span + span {
+      h1 span + span {
         margin-left: 0.125rem;
-        background: var(--evelated-two);
+      }
+
+      h2 {
+        font: 2rem/1.5 Ariata, serif;
+        text-align: center;
+      }
+
+      h2 span {
+        font-family: Hoefler, serif;
+        font-style: italic;
+        display: block;
+      }
+
+      p {
+        line-height: 1.5;
       }
     </style>
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
   </head>
   <body>
     <h1>
@@ -75,5 +151,6 @@
         </svg>
       </span>
     </h1>
+    <h2>Lightning fast websites <span>built to last</span></h2>
   </body>
 </html>
