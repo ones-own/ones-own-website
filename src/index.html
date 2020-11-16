@@ -43,6 +43,7 @@
         --green-36: hsl(var(--green-hs) 36%);
 
         --background: var(--cream-90);
+        --background-accent: var(--cream-94);
         --text: var(--brown-26);
         --accent: var(--brown-42);
         --separator: var(--brown-72);
@@ -54,6 +55,7 @@
       @media (prefers-color-scheme: dark) {
         :root {
           --background: var(--green-26);
+          --background-accent: var(--green-36);
           --text: var(--cream-90);
           --accent: var(--cream-80);
           --separator: var(--green-36);
@@ -81,6 +83,7 @@
 
       html {
         background: var(--background);
+        background: radial-gradient(var(--background-accent) 0%, var(--background)) 10%;
         color: var(--text);
         display: grid;
         font-family: Georgia, "Times New Roman", Times, serif;
