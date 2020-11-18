@@ -28,38 +28,38 @@
 
       :root {
         --cream-hs: 50deg 52%;
-        --cream-80: hsl(var(--cream-hs) 80%);
-        --cream-90: hsl(var(--cream-hs) 90%);
-        --cream-94: hsl(var(--cream-hs) 94%);
+        --cream-dark: hsl(var(--cream-hs) 80%);
+        --cream: hsl(var(--cream-hs) 86%);
+        --cream-light: hsl(var(--cream-hs) 94%);
 
         --brown-hs: 50deg 22%;
-        --brown-22: hsl(var(--brown-hs) 22%);
-        --brown-26: hsl(var(--brown-hs) 26%);
-        --brown-36: hsl(var(--brown-hs) 36%);
+        --brown-dark: hsl(var(--brown-hs) 22%);
+        --brown: hsl(var(--brown-hs) 26%);
+        --brown-light: hsl(var(--brown-hs) 36%);
 
         --green-hs: 150deg 26%;
-        --green-22: hsl(var(--green-hs) 22%);
-        --green-26: hsl(var(--green-hs) 26%);
-        --green-36: hsl(var(--green-hs) 36%);
+        --green-dark: hsl(var(--green-hs) 22%);
+        --green: hsl(var(--green-hs) 26%);
+        --green-light: hsl(var(--green-hs) 36%);
 
-        --background: var(--cream-90);
-        --background-accent: var(--cream-94);
-        --text: var(--brown-26);
-        --accent: var(--brown-42);
-        --separator: var(--brown-72);
-        --evelated: var(--cream-94);
+        --background: var(--cream);
+        --background-accent: var(--cream-light);
+        --text: var(--brown);
+        --accent: var(--brown-dark);
+        --separator: var(--brown-light);
+        --evelated: var(--cream-light);
 
         font-size: 93.75%;
       }
 
       @media (prefers-color-scheme: dark) {
         :root {
-          --background: var(--green-26);
-          --background-accent: var(--green-36);
-          --text: var(--cream-90);
-          --accent: var(--cream-80);
-          --separator: var(--green-36);
-          --evelated: var(--green-22);
+          --background: var(--green);
+          --background-accent: var(--green-light);
+          --text: var(--cream);
+          --accent: var(--cream-dark);
+          --separator: var(--green-light);
+          --evelated: var(--green-dark);
         }
       }
 
