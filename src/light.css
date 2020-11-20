@@ -1,0 +1,13 @@
+:root {
+  --background: var(--cream);
+  --background-accent: var(--cream-light);
+  --background-flash: url("flash-light.svg");
+  --background-color-stop-1: 40%;
+  --background-color-stop-2: 60%;
+  --text: var(--brown);
+  --accent: var(--brown-dark);
+  --separator: var(--brown-light);
+  --evelated: var(--cream-light);
+  --drop: var(--brown-light);
+  --inset: white;
+}

@@ -2,159 +2,29 @@
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
+    <link rel="modulepreload" href="./main.js" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lightning fast websites built to last" />
+    <link
+      rel="stylesheet"
+      href="light.css"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="stylesheet"
+      href="dark.css"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script type="module" src="main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Lightening fast websites
-    built to last"
+  built to last"
     />
     <title>One's own</title>
-    <style>
-      @font-face {
-        font-family: "Ariata";
-        src: url("ariata.woff2") format("woff2");
-        font-weight: bold;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Hoefler";
-        src: url("hoefler.woff2") format("woff2");
-        font-weight: normal;
-        font-style: italic;
-        font-display: swap;
-      }
-
-      :root {
-        --cream-hs: 50deg 52%;
-        --cream-dark: hsl(var(--cream-hs) 80%);
-        --cream: hsl(var(--cream-hs) 86%);
-        --cream-light: hsl(var(--cream-hs) 94%);
-
-        --brown-hs: 50deg 22%;
-        --brown-dark: hsl(var(--brown-hs) 22%);
-        --brown: hsl(var(--brown-hs) 26%);
-        --brown-light: hsl(var(--brown-hs) 36%);
-
-        --green-hs: 150deg 26%;
-        --green-dark: hsl(var(--green-hs) 22%);
-        --green: hsl(var(--green-hs) 26%);
-        --green-light: hsl(var(--green-hs) 36%);
-
-        --background: var(--cream);
-        --background-accent: var(--cream-light);
-        --background-flash: url("flash-light.svg");
-        --background-color-stop-1: 40%;
-        --background-color-stop-2: 60%;
-        --text: var(--brown);
-        --accent: var(--brown-dark);
-        --separator: var(--brown-light);
-        --evelated: var(--cream-light);
-
-        font-size: 93.75%;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --background: var(--green);
-          --background-accent: var(--green-light);
-          --background-flash: url("flash-dark.svg");
-          --background-color-stop-1: 10%;
-          --background-color-stop-2: 50%;
-          --text: var(--cream);
-          --accent: var(--cream-dark);
-          --separator: var(--green-light);
-          --evelated: var(--green-dark);
-        }
-      }
-
-      @media (min-width: 36rem) {
-        :root {
-          font-size: 100%;
-        }
-      }
-
-      @media (min-width: 40rem) {
-        :root {
-          font-size: 106.25%;
-        }
-      }
-
-      @media (min-width: 44rem) {
-        :root {
-          font-size: 112.5%;
-        }
-      }
-
-      html {
-        background: var(--background);
-        color: var(--text);
-        font-family: Georgia, "Times New Roman", Times, serif;
-      }
-
-      header {
-        background-image: var(--background-flash),
-          radial-gradient(
-            var(--background-accent) var(--background-color-stop-1),
-            var(--background) var(--background-color-stop-2)
-          );
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        padding: 10rem 0 10rem 0;
-        max-width: 60rem;
-        margin: 0 auto;
-      }
-
-      @media (min-width: 40rem) {
-        header {
-          background-size: contain;
-        }
-      }
-
-      h1 {
-        margin-top: 0;
-        display: flex;
-        justify-content: center;
-      }
-
-      svg {
-        display: block;
-      }
-
-      h1 span {
-        background: var(--text);
-        color: var(--background);
-        padding: 0.75rem 1rem;
-      }
-
-      h1 span + span {
-        margin-left: 0.125rem;
-      }
-
-      h2 {
-        font: 2rem/1.5 Ariata, serif;
-        text-align: center;
-      }
-
-      @media (min-width: 40rem) {
-        h2 {
-          font-size: 3rem;
-        }
-      }
-
-      h2 span {
-        font-family: Hoefler, serif;
-        font-style: italic;
-        display: block;
-      }
-
-      p {
-        line-height: 1.5;
-      }
-    </style>
-    <link rel="shortcut icon" href="/favicon.ico" />
   </head>
   <body>
     <header>
@@ -185,5 +55,14 @@
       </h1>
       <h2>Lightning fast websites <span>built to last</span></h2>
     </header>
+    <footer>
+      <dark-mode-toggle
+        id="dark-mode-toggle-1"
+        appearance="toggle"
+        dark="Dark mode"
+        light="Dark mode"
+        permanent
+      ></dark-mode-toggle>
+    </footer>
   </body>
 </html>
