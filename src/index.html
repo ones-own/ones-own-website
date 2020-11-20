@@ -45,6 +45,8 @@
         --background: var(--cream);
         --background-accent: var(--cream-light);
         --background-flash: url("flash-light.svg");
+        --background-color-stop-1: 40%;
+        --background-color-stop-2: 60%;
         --text: var(--brown);
         --accent: var(--brown-dark);
         --separator: var(--brown-light);
@@ -58,6 +60,8 @@
           --background: var(--green);
           --background-accent: var(--green-light);
           --background-flash: url("flash-dark.svg");
+          --background-color-stop-1: 10%;
+          --background-color-stop-2: 50%;
           --text: var(--cream);
           --accent: var(--cream-dark);
           --separator: var(--green-light);
@@ -91,13 +95,22 @@
 
       header {
         background-image: var(--background-flash),
-          radial-gradient(var(--background-accent) 0%, var(--background) 50%);
-        background-size: contain;
+          radial-gradient(
+            var(--background-accent) var(--background-color-stop-1),
+            var(--background) var(--background-color-stop-2)
+          );
+        background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
         padding: 10rem 0 10rem 0;
         max-width: 60rem;
         margin: 0 auto;
+      }
+
+      @media (min-width: 40rem) {
+        header {
+          background-size: contain;
+        }
       }
 
       h1 {
