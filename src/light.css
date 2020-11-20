@@ -4,10 +4,11 @@
   --background-flash: url("flash-light.svg");
   --background-color-stop-1: 40%;
   --background-color-stop-2: 60%;
-  --text: var(--brown);
-  --accent: var(--brown-dark);
-  --separator: var(--brown-light);
+  --text: var(--brown-dark);
+  --text-secondary: var(--brown);
+  --accent: var(--brown);
+  --separator: var(--brown-mid);
   --evelated: var(--cream-light);
-  --drop: var(--brown-light);
-  --inset: white;
+  --drop: var(--brown-dark);
+  --inset: var(--brown-light);
 }
