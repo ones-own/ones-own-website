@@ -45,6 +45,8 @@
         --background: var(--cream);
         --background-accent: var(--cream-light);
         --background-flash: url("flash-light.svg");
+        --background-color-stop-1: 40%;
+        --background-color-stop-2: 60%;
         --text: var(--brown);
         --accent: var(--brown-dark);
         --separator: var(--brown-light);
@@ -58,23 +60,12 @@
           --background: var(--green);
           --background-accent: var(--green-light);
           --background-flash: url("flash-dark.svg");
+          --background-color-stop-1: 10%;
+          --background-color-stop-2: 50%;
           --text: var(--cream);
           --accent: var(--cream-dark);
           --separator: var(--green-light);
           --evelated: var(--green-dark);
-        }
-
-        header {
-          background-image: var(--background-flash),
-          radial-gradient(var(--background-accent) 10%, var(--background) 50%);
-        }
-      }
-
-      @media (prefers-color-scheme: light) {
-
-        header {
-          background-image: var(--background-flash),
-          radial-gradient(var(--background-accent) 40%, var(--background) 60%);
         }
       }
 
@@ -103,6 +94,11 @@
       }
 
       header {
+        background-image: var(--background-flash),
+          radial-gradient(
+            var(--background-accent) var(--background-color-stop-1),
+            var(--background) var(--background-color-stop-2)
+          );
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -116,7 +112,7 @@
           background-size: contain;
         }
       }
-      
+
       h1 {
         margin-top: 0;
         display: flex;
