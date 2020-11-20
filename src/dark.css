@@ -1,0 +1,13 @@
+:root {
+  --background: var(--green);
+  --background-accent: var(--green-light);
+  --background-flash: url("flash-dark.svg");
+  --background-color-stop-1: 10%;
+  --background-color-stop-2: 50%;
+  --text: var(--cream);
+  --accent: var(--cream-dark);
+  --separator: var(--green-light);
+  --evelated: var(--green-dark);
+  --drop: var(--green-dark);
+  --inset: var(--green-light);
+}
