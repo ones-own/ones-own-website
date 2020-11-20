@@ -1,8 +1,8 @@
 :root {
   --background: var(--green);
-  --background-accent: var(--green-mid);
+  --background-accent: var(--green-light);
   --background-flash: url("flash-dark.svg");
-  --background-color-stop-1: 0%;
+  --background-color-stop-1: 10%;
   --background-color-stop-2: 50%;
   --text: var(--cream);
   --text-secondary: var(--brown-light);
