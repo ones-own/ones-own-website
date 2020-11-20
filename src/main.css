@@ -36,7 +36,7 @@
 }
 
 html {
-  background: var(--background);
+  background: var(--background, var(--cream));
   color: var(--text);
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 93.75%;
