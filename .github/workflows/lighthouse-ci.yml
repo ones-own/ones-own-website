@@ -14,8 +14,8 @@ jobs:
           node-version: 14.x
       - name: Install & Build
         run: |
-          yarn install
-          yarn build
+          npm install
+          npm build
       - name: Wait for the Netlify Preview
         uses: jakepartusch/wait-for-netlify-action@v1
         id: netlify
