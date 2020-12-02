@@ -1,120 +1,87 @@
+/**
+ * Fonts 
+ */
+
 @font-face {
-  font-family: "Ariata";
-  src: url("ariata.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
   font-display: swap;
+  font-family: "Ariata";
+  font-style: normal;
+  font-weight: 700;
+  src: url("ariata.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Hoefler";
-  src: url("hoefler.woff2") format("woff2");
-  font-weight: normal;
-  font-style: italic;
   font-display: swap;
+  font-family: "Hoefler";
+  font-style: italic;
+  font-weight: 400;
+  src: url("hoefler.woff2") format("woff2");
 }
+
+/**
+ * Root
+ */
 
 :root {
-  color-scheme: light dark;
-
-  --cream-hs: 50deg 52%;
-  --cream-dark: hsl(var(--cream-hs) 80%);
-  --cream: hsl(var(--cream-hs) 86%);
-  --cream-light: hsl(var(--cream-hs) 94%);
-
+  --cream-hs: 50deg 40%;
+  --cream-dark: hsl(var(--cream-hs) 74%);
+  --cream-mid: hsl(var(--cream-hs) 86%);
+  --cream: hsl(var(--cream-hs) 93%);
+  --cream-light: hsl(var(--cream-hs) 99%);
   --brown-hs: 50deg 22%;
   --brown-dark: hsl(var(--brown-hs) 22%);
-  --brown: hsl(var(--brown-hs) 26%);
   --brown-mid: hsl(var(--brown-hs) 36%);
+  --brown: hsl(var(--brown-hs) 40%);
   --brown-light: hsl(var(--brown-hs) 72%);
-
   --green-hs: 150deg 26%;
-  --green-dark: hsl(var(--green-hs) 22%);
-  --green: hsl(var(--green-hs) 26%);
+  --green-dark: hsl(var(--green-hs) 18%);
+  --green: hsl(var(--green-hs) 22%);
   --green-mid: hsl(var(--green-hs) 30%);
-  --green-light: hsl(var(--green-hs) 36%);
-}
+  --green-light: hsl(var(--green-hs) 34%);
+  --green-lighter: hsl(var(--green-hs) 42%);
+  --green-lightest: hsl(var(--green-hs) 58%);
 
-html {
-  background: var(--background, var(--cream));
-  color: var(--text);
-  font-family: Georgia, "Times New Roman", Times, serif;
+  color-scheme: light dark;
   font-size: 93.75%;
-}
 
-@media (min-width: 36rem) {
-  html {
+  @media (min-width: 36rem) {
     font-size: 100%;
   }
-}
 
-@media (min-width: 40rem) {
-  html {
+  @media (min-width: 40rem) {
     font-size: 106.25%;
   }
-}
 
-@media (min-width: 44rem) {
-  html {
+  @media (min-width: 44rem) {
     font-size: 112.5%;
   }
 }
 
-header {
-  background-image: var(--background-flash),
-    radial-gradient(
-      var(--background-accent) var(--background-color-stop-1),
-      var(--background) var(--background-color-stop-2)
-    );
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  padding: 10rem 0 10rem 0;
-  max-width: 60rem;
-  margin: 0 auto;
+/**
+ * Base
+ */
+
+html {
+  background: var(--background, var(--cream));
+  color: var(--text);
+  font-family: Georgia, serif;
 }
 
-@media (min-width: 40rem) {
-  header {
-    background-size: contain;
-  }
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--elevated),
+    var(--background) 20rem
+  );
+  margin-block: 0;
+  margin-inline: 0;
 }
 
-header h1 {
-  margin-top: 0;
-  display: flex;
-  justify-content: center;
-}
-
-svg {
-  display: block;
-}
-
-header h1 span {
-  background: var(--text);
-  color: var(--background);
-  padding: 0.75rem 1rem;
-}
-
-header h1 span + span {
-  margin-left: 0.125rem;
-}
-
-header h2 {
-  font: 2rem/1.5 Ariata, serif;
-  text-align: center;
-}
-
-@media (min-width: 40rem) {
-  header h2 {
-    font-size: 3rem;
-  }
-}
-
-header h2 span {
-  font-family: Hoefler, serif;
-  font-style: italic;
-  display: block;
+h1,
+h2,
+h3 {
+  font-family: Ariata, serif;
+  line-height: 1.25;
 }
 
 p {
@@ -123,44 +90,56 @@ p {
 
 a {
   color: var(--text);
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-a:hover {
-  text-decoration: none;
+sub,
+sup {
+  line-height: 1;
 }
 
-img {
-  max-width: 100%;
+small {
+  line-height: 1.5;
+}
+
+fieldset {
+  border-color: var(--separator);
+  border-style: solid;
+  max-inline-size: 100%;
 }
 
 label {
-  font-size: inherit;
-  font-family: inherit;
   display: block;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 button,
 input,
 select,
 textarea {
-  font-size: inherit;
-  font-family: inherit;
+  background: var(--elevated);
+  border: 1px solid var(--separator);
   color: inherit;
-  background: var(--background-accent);
+  font-family: inherit;
+  font-size: inherit;
+  max-inline-size: 100%;
   padding: 0.25rem 0.5rem;
-  border: 0.125rem solid var(--separator);
 }
 
 button,
 input[type="submit"],
 input[type="button"],
 input[type="reset"] {
-  color: var(--background);
   background: var(--accent);
   border: none;
-  padding: 0.5rem 0.75rem;
   border-radius: 0.25rem;
   box-shadow: 0 1px 0 0 var(--drop), inset 0 1px 0 0 var(--inset);
+  color: var(--text-inverse);
+  padding: 0.5rem 0.75rem;
 }
 
 a:focus,
@@ -168,13 +147,17 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-  outline: var(--accent) solid 0.25rem;
+  outline: var(--accent) solid 2px;
 }
 
-a::placeholder,
-button::placeholder,
+button:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus {
+  outline-color: var(--accent-secondary);
+}
+
 input::placeholder,
-select::placeholder,
 textarea::placeholder {
   color: var(--text-secondary);
 }
@@ -185,45 +168,344 @@ table {
 
 td,
 th {
-  border-bottom: 0.125rem solid var(--separator);
+  border-bottom: 1px solid var(--separator);
   padding: 0.5rem 0.75rem;
-  text-align: left;
+  text-align: start;
 }
 
 caption {
-  text-align: left;
+  text-align: start;
+}
+
+hr {
+  border-style: solid;
+  color: var(--separator);
+}
+
+img,
+iframe {
+  max-inline-size: 100%;
+}
+
+svg {
+  display: block;
+}
+
+/**
+ * Specifics 
+ */
+
+/* Be Part */
+
+.be-part {
+  background: radial-gradient(var(--background) 30%, var(--sunken) 80%);
+  overflow: hidden;
+  padding-block: 4rem 3rem;
+  padding-inline: 1rem;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    background: var(--background);
+    block-size: 3rem;
+    border: 1px solid var(--separator);
+    border-radius: 100%;
+    content: "";
+    inset-block-start: -25px;
+    inset-inline: -10%;
+    inset-inline-end: -10%;
+    position: absolute;
+  }
+
+  & > h2 {
+    font-size: 2em;
+  }
+
+  & > p {
+    margin-inline: auto;
+    max-inline-size: 32rem;
+  }
+}
+
+/* Header */
+
+header[role="banner"] {
+  align-items: center;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  max-inline-size: 60rem;
+  padding: 1rem;
+
+  & > h1 {
+    display: flex;
+    margin-block: 0;
+
+    & > span {
+      background: var(--logo-primary);
+      color: var(--logo-text);
+      display: block;
+      padding: 0.75rem 1rem;
+
+      & + span {
+        background: var(--logo-secondary);
+        margin-inline: 0.125rem;
+      }
+    }
+  }
+
+  & > div {
+    position: relative;
+  }
+
+  @media (min-width: 40rem) {
+    background-size: contain;
+  }
+}
+
+/* Hero */
+
+.hero {
+  padding: 1rem 1.5rem;
+
+  & > h2 {
+    font-size: 2em;
+    line-height: 1.25;
+    margin-block-end: 0.5rem;
+    text-align: center;
+
+    @media (min-width: 22rem) {
+      font-size: 2.5em;
+    }
+
+    @media (min-width: 26rem) {
+      font-size: 3em;
+    }
+  }
+
+  & > h3 {
+    display: block;
+    font: italic 400 1.75em/1.25 Hoefler, serif;
+    margin-block-start: 1.25rem;
+    text-align: center;
+
+    @media (min-width: 22rem) {
+      font-size: 2.25em;
+    }
+
+    @media (min-width: 26rem) {
+      font-size: 2.75em;
+    }
+  }
+}
+
+/* Cards */
+
+.cards {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 26rem));
+  margin-block-start: 1rem;
+  padding: 1rem;
+  place-content: center;
 }
 
 .card {
-  border-radius: 1rem 1rem 50% 50% / 1rem 1rem 15% 15%;
-  background: var(--evelated);
-  max-width: 10rem;
-  padding: 5rem;
+  background: var(--elevated);
+  border-radius: 1rem 1rem 45% 45% / 1rem 1rem 10% 10%;
   box-shadow: 0 1px 0 0 var(--drop), inset 0 1px 0 0 var(--inset);
+  padding: 2rem;
+  text-align: center;
+
+  & > h2 {
+    font-family: Ariata, serif;
+    margin: 0;
+  }
 }
+
+/* Fact */
+
+.fact {
+  align-items: center;
+  border-block-end: 1px solid var(--separator);
+  border-radius: 0 0 50% 50% / 0 0 20% 20%;
+  display: flex;
+  justify-content: center;
+  margin-block-start: 1.5rem;
+  padding-block-end: 1.5rem;
+
+  & > dt {
+    display: flex;
+    font-family: Ariata, serif;
+    font-size: 3em;
+    line-height: 1;
+
+    & > svg {
+      color: var(--accent-tertiary);
+      margin-block-start: 0.5rem;
+      margin-inline-end: 0.5rem;
+    }
+
+    & > sup {
+      font-size: 0.5em;
+    }
+  }
+
+  & > dd {
+    margin-block-start: 0.25rem;
+    margin-inline-start: 1.25rem;
+    text-align: start;
+  }
+}
+
+/* Features */
+
+.features {
+  margin: 1rem auto 0;
+  max-inline-size: 50rem;
+  padding: 3rem 2rem;
+
+  & > h2 {
+    text-align: center;
+  }
+
+  & > ul {
+    align-items: flex-end;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-gap: 3rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-block-start: 3rem;
+    padding-inline-start: 0;
+
+    & > li {
+      display: grid;
+      font-size: 1.25em;
+      grid-gap: 1rem;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      text-align: center;
+
+      & > svg {
+        --icon-1: var(--accent-tertiary);
+        --icon-2: var(--accent-quaternary);
+
+        justify-self: center;
+      }
+    }
+
+    @media (min-width: 19rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 52rem) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+/* Footer */
+
+footer[role="contentinfo"] {
+  overflow: hidden;
+  padding: 3rem 1rem;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    background: var(--sunken);
+    block-size: 4rem;
+    border-radius: 100%;
+    content: "";
+    inset-block-start: -25px;
+    inset-inline: -10%;
+    inset-inline-end: -10%;
+    position: absolute;
+  }
+
+  & > p {
+    background: var(--accent);
+    border-radius: 0.5rem 0.5rem 50% 50% / 0.5rem 0.5rem 30% 30%;
+    color: var(--text-inverse);
+    inset-block-start: -2.5rem;
+    margin: 0 auto;
+    max-inline-size: 20rem;
+    padding: 1rem 2rem 1.25rem;
+    position: relative;
+    text-align: center;
+  }
+
+  & > small {
+    display: block;
+    margin-block-start: 1rem;
+  }
+}
+
+/* Dark Mode Toggle */
 
 dark-mode-toggle {
-  --dark-mode-toggle-dark-icon: url("toggle-dark.svg");
-  --dark-mode-toggle-light-icon: url("toggle-light.svg");
+  --dark-mode-toggle-outline: var(--accent) auto 4px;
+  --dark-mode-toggle-label-before-background: var(--sunken);
+  --dark-mode-toggle-label-before-drop: var(--inset);
+  --dark-mode-toggle-label-before-inset: var(--drop);
+  --dark-mode-toggle-label-after-background: var(--accent-tertiary);
+  --dark-mode-toggle-label-after-drop: var(--drop--accent);
+  --dark-mode-toggle-label-after-inset: var(--inset-accent);
 
+  &::part(label) {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+}
+
+@keyframes --fade-out {
+  0% {
+    opacity: 0.9;
+  }
+
+  60% {
+    transform: translateY(-0.25rem);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+#dark-mode-info {
+  animation: 0.3s --fade-out 5s ease-in forwards;
+  background: var(--sunken);
+  inset-inline-end: 0;
+  inset-inline-start: -5rem;
+  margin-block-start: 1rem;
+  max-inline-size: 12rem;
+  opacity: 0.9;
+  padding: 1rem 1.5rem;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
+  transform: translateY(-0.25rem);
 
-dark-mode-toggle::part(toggleLabel) {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  font-weight: bold;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
+  &::before {
+    background: var(--sunken);
+    block-size: 1.5rem;
+    clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
+    content: "";
+    inline-size: 1.5rem;
+    inset-block-start: calc((1.5rem - 1px) * -1);
+    inset-inline-end: 1.5rem;
+    position: absolute;
+  }
 
-dark-mode-toggle::part(toggleLabel)::before {
-  background-size: 68px 38px;
-  width: 68px;
-  height: 38px;
-  margin-inline-end: 0;
-  margin-inline-start: 0.5rem;
+  @media (min-width: 24rem) {
+    inset-inline-start: auto;
+  }
+
+  @media (prefers-reduced-motion) {
+    animation-duration: 0s;
+  }
 }

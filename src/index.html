@@ -2,7 +2,7 @@
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
-    <link rel="modulepreload" href="main.js" />
+    <link rel="modulepreload" href="dark-mode-toggle.js" />
     <link
       rel="preload"
       as="font"
@@ -17,8 +17,6 @@
       type="font/woff2"
       crossorigin="anonymous"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Lightning fast websites built to last" />
     <link
       rel="stylesheet"
       href="light.css"
@@ -30,18 +28,19 @@
       media="(prefers-color-scheme: dark)"
     />
     <link rel="stylesheet" href="main.css" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <script type="module" src="dark-mode-toggle.js"></script>
     <script type="module" src="main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Lightening fast websites
-  built to last"
+      content="Beautifully crafted websites.
+    Blazingly fast & built to last."
     />
     <title>One's own</title>
   </head>
   <body>
-    <header>
+    <header role="banner">
       <h1>
         <span>
           <svg width="62" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -67,16 +66,192 @@
           </svg>
         </span>
       </h1>
-      <h2>Lightning fast websites <span>built to last</span></h2>
+      <div>
+        <dark-mode-toggle
+          id="dark-mode-toggle"
+          label="Dark mode"
+        ></dark-mode-toggle>
+      </div>
     </header>
-    <footer>
-      <dark-mode-toggle
-        id="dark-mode-toggle-1"
-        appearance="toggle"
-        dark="Dark mode"
-        light="Dark mode"
-        permanent
-      ></dark-mode-toggle>
+    <main>
+      <div class="hero">
+        <h2>Beautifully crafted&nbsp;websites</h2>
+        <h3>Blazingly fast &&nbsp;built&nbsp;to&nbsp;last</h3>
+      </div>
+      <div class="cards">
+        <section class="card">
+          <h2>Good for your customers</h2>
+          <p>
+            We create blazingly fast, customer-centric websites that
+            increase&nbsp;conversion.
+          </p>
+          <dl class="fact">
+            <dt>
+              <svg
+                width="29"
+                height="29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M17 8.5V29h-5V8.5h5z"
+                  fill="currentColor"
+                />
+                <path d="M14.5 0l12.6 12.8H1.9L14.5 0z" fill="currentColor" />
+              </svg>
+              2<sup>%</sup>
+            </dt>
+            <dd>increase<br />in conversions</dd>
+          </dl>
+          <p>for every second we save in page&nbsp;load</p>
+        </section>
+        <section class="card">
+          <h2>Good for the planet</h2>
+          <p>
+            Our websites are highly energy efficient, sustainably designed and
+            built to&nbsp;last.
+          </p>
+          <dl class="fact">
+            <dt>
+              <svg
+                width="29"
+                height="29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 20.5V0h5v20.5h-5z"
+                  fill="currentColor"
+                />
+                <path d="M14.5 29L1.9 16.2h25.2L14.5 29z" fill="currentColor" />
+              </svg>
+              90<sup>%</sup>
+            </dt>
+            <dd>
+              less CO<sub>2</sub><br />
+              emitted
+            </dd>
+          </dl>
+          <p>than other comparable&nbsp;websites</p>
+        </section>
+      </div>
+      <section class="features">
+        <h2>We design and build websites that are&nbsp;always</h2>
+        <ul>
+          <li>
+            <svg
+              width="29"
+              height="49"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M20.5 0l-5 28.5H0L20.5 0z" fill="var(--icon-1)" />
+              <path
+                d="M8 48.4998l5.0001-28.5h15.5l-20.5 28.5z"
+                fill="var(--icon-2)"
+              />
+            </svg>
+            Blazingly-fast
+          </li>
+          <li>
+            <svg
+              width="52"
+              height="52"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.04 20.72C21.32 18.62 23.88 18 26 18c2.23 0 4.87.67 5.16 2.88l1.76 13.38c.07.58-.11 1.17-.58 1.54a10.26 10.26 0 01-12.55-.01c-.43-.36-.6-.93-.53-1.5l1.78-13.57z"
+                fill="var(--icon-1)"
+              />
+              <path
+                d="M25.56 17.98S23.6 17.38 23 17c-.7-.43-1.82-.56-2.35.09l-6.7 8.2a1.68 1.68 0 002.52 2.22l9.09-9.53zM26.25 17.98s1.95-.6 2.56-.98c.7-.43 1.82-.56 2.35.09l6.7 8.2a1.68 1.68 0 01-2.52 2.22l-9.09-9.53z"
+                fill="var(--icon-1)"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M26 50a24 24 0 100-48 24 24 0 000 48zm0 2a26 26 0 100-52 26 26 0 000 52z"
+                fill="var(--icon-2)"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M26 42.31a16 16 0 100-32 16 16 0 000 32zm0 2a18 18 0 100-36 18 18 0 000 36z"
+                fill="var(--icon-2)"
+              />
+              <circle cx="26" cy="10" r="6" fill="var(--icon-1)" />
+            </svg>
+            Accessible
+          </li>
+          <li>
+            <svg
+              width="64"
+              height="34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="var(--icon-1)"
+                d="M0 24h20v10H0zM22 24h20v10H22zM44 24h20v10H44z"
+              />
+              <path
+                fill="var(--icon-2)"
+                d="M11 12h20v10H11zM33 12h20v10H33zM22 0h20v10H22z"
+              />
+            </svg>
+            Built to last
+          </li>
+          <li>
+            <svg
+              width="38"
+              height="48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22.71 44.89l-.15-.04-1.69-15.22c-.24-2.1-.1-4.15.55-6.14a11.46 11.46 0 011.91-3.68c.4-.5.84-.95 1.33-1.36.1-.08.84-.52.84-.6 0 0-1.37.56-1.48.62a11.66 11.66 0 00-3.98 3.64l-1.11-10.04-1.1 10c-.65-.9-1.4-1.74-2.26-2.46-.6-.5-1.26-.92-1.95-1.28-.1-.05-1.23-.47-1.23-.48 0 .08.93.67 1.04.77.48.42.92.9 1.3 1.4.8 1.02 1.35 2.24 1.75 3.47.6 1.85.75 3.75.57 5.69l-1.57 14.29c-1.4-.17-2.72-.23-3.67-.07-2.07.34-4.72 1.6-5.26 3.86 3.42-2.88 8.75-.93 12.54.08 2.27.6 4.67.89 7 .44 2.05-.4 4.7-1.62 5.25-3.87-2.33 1.94-5.01 1.87-8.63.98z"
+                fill="var(--icon-1)"
+              />
+              <path
+                d="M18.6.13a9.24 9.24 0 00-2.07 5.4v.07c.03 2.98 2.09 5.32 2.18 5.42a.38.38 0 00.57 0 9.24 9.24 0 002.07-5.4v-.07C21.32 2.58 19.27.23 19.18.13a.38.38 0 00-.57 0zM.06 15.59c.08.1 1.81 2.65 4.65 3.45l.06.01c2.88.78 5.7-.57 5.81-.63a.38.38 0 00.15-.55 9.24 9.24 0 00-4.65-3.45l-.06-.02c-2.87-.77-5.69.57-5.8.63a.38.38 0 00-.16.56zM37.82 15.59c-.07.1-1.8 2.65-4.64 3.45l-.06.01c-2.88.78-5.7-.57-5.81-.63a.38.38 0 01-.15-.55c.07-.11 1.8-2.66 4.65-3.45l.05-.02c2.88-.77 5.7.57 5.81.63a.38.38 0 01.15.56zM32.16 5.03c-.17.01-4.33.37-7.16 3.2l-.06.05c-2.82 2.88-3.1 7.1-3.12 7.28a.52.52 0 00.56.55c.18-.02 4.34-.37 7.17-3.2l.05-.05c2.83-2.89 3.11-7.1 3.12-7.29a.52.52 0 00-.55-.54zM5.72 5.03c.18.01 4.34.37 7.17 3.2l.05.05c2.83 2.88 3.11 7.1 3.12 7.28a.52.52 0 01-.55.55c-.18-.02-4.34-.37-7.17-3.2l-.06-.05c-2.82-2.89-3.1-7.1-3.11-7.29a.52.52 0 01.55-.54zM3.53 31.68c.02-.17.37-4.34 3.2-7.16l.05-.06c2.89-2.83 7.1-3.1 7.29-3.12a.52.52 0 01.54.56c-.01.17-.36 4.34-3.2 7.16l-.05.06c-2.88 2.83-7.1 3.1-7.28 3.12a.52.52 0 01-.55-.56zM34.36 31.68c-.02-.17-.37-4.34-3.2-7.16l-.06-.06c-2.88-2.83-7.1-3.1-7.28-3.12a.52.52 0 00-.54.56c0 .17.36 4.34 3.19 7.16l.06.06c2.88 2.83 7.1 3.1 7.28 3.12a.52.52 0 00.55-.56z"
+                fill="var(--icon-2)"
+              />
+            </svg>
+            Sustainable
+          </li>
+        </ul>
+      </section>
+      <section class="be-part">
+        <h2>Be part of the change</h2>
+        <p>
+          By using these techniques, everyone wins. You get more happy
+          customers, and the planet benefits&nbsp;too.
+        </p>
+        <p><a href="mailto:hello@onesown.co.uk">hello@onesown.co.uk</a></p>
+      </section>
+    </main>
+    <footer role="contentinfo">
+      <p>
+        This page emitted just 0.04g of C0<sub>2</sub>, less than 96% of
+        other&nbsp;websites
+      </p>
+      <small
+        >Statistics from
+        <a
+          href="https://www.cloudflare.com/en-gb/learning/performance/more/website-performance-conversion-rates/"
+          >Cloudfare</a
+        >, <a href="https://youtu.be/N_6sPd0Jd3g?t=194">Google</a>
+        and
+        <a href="https://www.websitecarbon.com/"
+          >Website Carbon&nbsp;Calculator</a
+        >.</small
+      >
+      <small>Copyright 2020 One's Own</small>
     </footer>
   </body>
 </html>

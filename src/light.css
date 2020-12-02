@@ -1,14 +1,20 @@
 :root {
   --background: var(--cream);
-  --background-accent: var(--cream-light);
-  --background-flash: url("flash-light.svg");
-  --background-color-stop-1: 40%;
-  --background-color-stop-2: 60%;
+  --elevated: var(--cream-light);
+  --sunken: var(--cream-mid);
   --text: var(--brown-dark);
   --text-secondary: var(--brown);
+  --text-inverse: var(--cream-light);
   --accent: var(--brown);
-  --separator: var(--brown-mid);
-  --evelated: var(--cream-light);
-  --drop: var(--brown-dark);
-  --inset: var(--brown-light);
+  --accent-secondary: var(--brown-dark);
+  --accent-tertiary: var(--brown);
+  --accent-quaternary: var(--brown-light);
+  --separator: var(--brown-light);
+  --drop: var(--cream-dark);
+  --drop-accent: var(--brown-dark);
+  --inset: var(--cream-light);
+  --inset-accent: var(--brown-light);
+  --logo-primary: var(--brown-dark);
+  --logo-secondary: var(--brown);
+  --logo-text: var(--cream-light);
 }
