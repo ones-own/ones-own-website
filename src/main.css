@@ -454,7 +454,7 @@ dark-mode-toggle {
   --dark-mode-toggle-label-before-drop: var(--inset);
   --dark-mode-toggle-label-before-inset: var(--drop);
   --dark-mode-toggle-label-after-background: var(--accent-tertiary);
-  --dark-mode-toggle-label-after-drop: var(--drop--accent);
+  --dark-mode-toggle-label-after-drop: var(--drop-accent);
   --dark-mode-toggle-label-after-inset: var(--inset-accent);
 
   &::part(label) {

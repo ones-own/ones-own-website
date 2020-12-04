@@ -42,7 +42,7 @@ template.innerHTML = `
     display: none;
   }
 
-  [part=form] {
+  [part="form"] {
     display: flex;
     justify-content: flex-end;
   }
@@ -54,47 +54,48 @@ template.innerHTML = `
 
   [part="input"] {
     opacity: 0;
-    position: absolute;
     pointer-events: none;
+    position: absolute;
   }
 
   [part="label"] {
+    align-items: center;
+    display: flex;
     font: var(--${NAME}-label-font, inherit);
     font-weight: 700;
+    min-height: calc(2rem + 3px);
     position: relative;
     padding-right: 4.5rem;
-    min-height: calc(2rem + 3px);
-    display: flex;
-    align-items: center;
     text-align: right;
   }
 
   [part="label"]::before {
-    content: "";
-    right: 0;
-    top: 1px;
-    position: absolute;
-    background: var(--${NAME}-label-before-background, lightgrey);
+    background: var(--${NAME}-label-before-background, transparent);
     border-radius: 500rem;
+    box-shadow: 0 1px 0 0 var(--${NAME}-label-before-drop, transparent),
+      inset 0 1px 0 0 var(--${NAME}-label-before-inset, transparent);
+    content: "";
     display: block;
     height: 2rem;
+    position: absolute;
+    right: 0;
+    top: 1px;
     width: 4rem;
-    vertical-align: middle;
-    box-shadow: 0 1px 0 0 var(--${NAME}-label-before-drop, white), inset 0 1px 0 0 var(--${NAME}-label-before-inset, black);
   }
 
   [part="label"]::after {
-    position: absolute;
+    background: var(--${NAME}-label-after-background, transparent);
+    border-radius: 100%;
+    box-shadow: 0 1px 0 0 var(--${NAME}-label-after-drop, transparent),
+      inset 0 1px 0 0 var(--${NAME}-label-after-inset, transparent);
     content: "";
+    display: block;
+    height: calc(2rem + 2px);
+    position: absolute;
     right: 0;
     top: 0;
-    height: calc(2rem + 2px);
-    width: calc(2rem + 2px);
-    background: var(--${NAME}-label-after-background, darkgrey);
-    border-radius: 100%;
-    display: block;
     transform: translateX(-1.85rem);
-    box-shadow: 0 1px 0 0 var(--${NAME}-label-after-drop, black), inset 0 1px 0 0 var(--${NAME}-label-after-inset, white);
+    width: calc(2rem + 2px);
   }
 
   [part="input"]:focus-visible + [part="label"] {

@@ -11,7 +11,7 @@
   --accent-quaternary: var(--green-light);
   --separator: var(--green-light);
   --drop: var(--green-dark);
-  --drop-accent: var(--cream);
+  --drop-accent: var(--green-dark);
   --inset: var(--green-light);
   --inset-accent: var(--green-lightest);
   --logo-primary: var(--green-dark);
