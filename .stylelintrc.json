@@ -31,7 +31,7 @@
       "outline": ["px"],
       "/^font/": ["%", "em"],
       "/^gap/": ["rem"],
-      "/^margin/": ["rem", "vw"],
+      "/^margin/": ["em", "rem", "vw"],
       "/^padding/": ["rem"]
     },
     "font-weight-notation": "numeric",
@@ -42,6 +42,7 @@
       "min-width",
       "prefers-reduced-motion"
     ],
+    "no-descending-specificity": null,
     "number-max-precision": 4,
     "order/order": [
       ["custom-properties", "declarations", "rules", "at-rules"],
@@ -66,10 +67,7 @@
     "scales/font-family": [["Georgia", "Ariata", "Hoefler", "serif"]],
     "scales/font-weight": [[400, 700]],
     "scales/line-height": [[1, 1.25, 1.5]],
-    "scales/space": [
-      [0.125, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2, 3, 4],
-      { "unit": "rem" }
-    ],
+    "scales/space": [[0.125, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2, 3, 4, 5]],
     "selector-type-no-unknown": [true, { "ignore": ["custom-elements"] }],
     "selector-no-vendor-prefix": true,
     "value-no-vendor-prefix": true,
