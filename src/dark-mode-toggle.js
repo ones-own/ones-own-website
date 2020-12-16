@@ -203,7 +203,6 @@ export class DarkModeToggle extends HTMLElement {
       this._updateCheckbox();
       this._updateMode();
     } else if (name === LABEL) {
-      console.log("x");
       this._checkboxLabel.textContent = newValue;
     }
   }

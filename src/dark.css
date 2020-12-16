@@ -16,5 +16,7 @@
   --inset-accent: var(--green-lightest);
   --logo-primary: var(--green-dark);
   --logo-secondary: var(--green);
-  --text-text: var(--cream-mid);
+  --logo-text: var(--cream-mid);
+  --tree-trunk: var(--green-dark);
+  --tree-roots: var(--green-mid);
 }

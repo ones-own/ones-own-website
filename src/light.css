@@ -17,4 +17,6 @@
   --logo-primary: var(--brown-dark);
   --logo-secondary: var(--brown);
   --logo-text: var(--cream-light);
+  --tree-trunk: var(--brown);
+  --tree-roots: var(--cream-light);
 }
