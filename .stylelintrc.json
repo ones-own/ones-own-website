@@ -32,7 +32,7 @@
       "/^font/": ["%", "em"],
       "/^gap/": ["rem"],
       "/^margin/": ["em", "rem", "vw"],
-      "/^padding/": ["rem"]
+      "/^padding/": ["em", "rem"]
     },
     "font-weight-notation": "numeric",
     "function-url-no-scheme-relative": true,
@@ -63,14 +63,54 @@
         "severity": "warning"
       }
     ],
-    "scales/border-width": [[1], { "unit": "px" }],
-    "scales/font-family": [["Georgia", "Ariata", "Hoefler", "serif"]],
+    "scales/border-width": [[1, 2, 4], { "unit": "px" }],
+    "scales/font-family": [["Ariata", "Hoefler", "Georgia", "serif"]],
+    "scales/font-size": [
+      [
+        0.28,
+        0.48,
+        0.58,
+        0.67,
+        0.83,
+        1,
+        1.17,
+        1.5,
+        1.73,
+        2,
+        2.5,
+        3,
+        3.6,
+        4.3,
+        5.2
+      ]
+    ],
     "scales/font-weight": [[400, 700]],
-    "scales/line-height": [[1, 1.25, 1.5]],
-    "scales/space": [[0.125, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2, 3, 4, 5]],
+    "scales/line-height": [[1, 1.2, 1.5]],
+    "scales/space": [
+      [
+        0.125,
+        0.23,
+        0.25,
+        0.28,
+        0.48,
+        0.5,
+        0.58,
+        0.75,
+        0.83,
+        1,
+        1.25,
+        1.5,
+        2,
+        2.5,
+        3,
+        4,
+        5
+      ]
+    ],
+    "selector-combinator-disallowed-list": [" "],
     "selector-type-no-unknown": [true, { "ignore": ["custom-elements"] }],
     "selector-no-vendor-prefix": true,
     "value-no-vendor-prefix": true,
-    "unit-allowed-list": ["%", "deg", "em", "fr", "rem", "s", "px"]
+    "unit-allowed-list": ["%", "deg", "em", "fr", "px", "rem", "s", "vw"]
   }
 }

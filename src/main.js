@@ -3,6 +3,7 @@ document.addEventListener("colorschemechange", (e) => {
     const toggle = document.getElementById("dark-mode-toggle");
     const info = document.createElement("p");
     info.id = "dark-mode-info";
+    info.setAttribute("is", "dark-mode-info");
     info.innerHTML = "You’re now using 60% less energy to view this website";
     toggle.after(info);
   } else {
