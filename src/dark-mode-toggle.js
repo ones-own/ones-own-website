@@ -44,7 +44,6 @@ template.innerHTML = `
 
   [part="form"] {
     display: flex;
-    justify-content: flex-end;
   }
 
   [part="input"],
@@ -61,19 +60,22 @@ template.innerHTML = `
   [part="label"] {
     align-items: center;
     display: flex;
+    color: var(--${NAME}-label-color, inherit);
     font: var(--${NAME}-label-font, inherit);
     font-weight: 700;
     min-height: calc(2rem + 3px);
     position: relative;
     padding-right: 4.5rem;
-    text-align: right;
+    -webkit-tap-highlight-color: transparent;
+    text-align: right;   
+    user-select: none;
   }
 
   [part="label"]::before {
-    background: var(--${NAME}-label-before-background, transparent);
+    background: var(--${NAME}-track-background, transparent);
     border-radius: 500rem;
-    box-shadow: 0 1px 0 0 var(--${NAME}-label-before-drop, transparent),
-      inset 0 1px 0 0 var(--${NAME}-label-before-inset, transparent);
+    box-shadow: 0 1px 0 0 var(--${NAME}-track-drop, transparent),
+      inset 0 1px 0 0 var(--${NAME}-track-inset, transparent);
     content: "";
     display: block;
     height: 2rem;
@@ -84,10 +86,10 @@ template.innerHTML = `
   }
 
   [part="label"]::after {
-    background: var(--${NAME}-label-after-background, transparent);
+    background: var(--${NAME}-thumb-background, transparent);
     border-radius: 100%;
-    box-shadow: 0 1px 0 0 var(--${NAME}-label-after-drop, transparent),
-      inset 0 1px 0 0 var(--${NAME}-label-after-inset, transparent);
+    box-shadow: 0 1px 0 0 var(--${NAME}-thumb-drop, transparent),
+      inset 0 1px 0 0 var(--${NAME}-thumb-inset, transparent);
     content: "";
     display: block;
     height: calc(2rem + 2px);
@@ -99,7 +101,8 @@ template.innerHTML = `
   }
 
   [part="input"]:focus-visible + [part="label"] {
-    outline: var(--${NAME}-outline, yellow solid 4px);
+    background-image: linear-gradient(to right, var(--${NAME}-focus) 58%, transparent 58%);
+    color: var(--${NAME}-on-focus, transparent);
   }
 
   [part="input"]:checked + [part="label"]::after {
