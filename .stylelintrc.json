@@ -104,10 +104,16 @@
         2.5,
         3,
         4,
-        5
+        5,
+        8,
+        12,
+        16,
+        24,
+        32
       ]
     ],
     "selector-combinator-disallowed-list": [" "],
+    "selector-pseudo-element-colon-notation": "double",
     "selector-type-no-unknown": [true, { "ignore": ["custom-elements"] }],
     "selector-no-vendor-prefix": true,
     "value-no-vendor-prefix": true,
