@@ -712,7 +712,7 @@ p[is="dark-mode-info"] {
   background-color: hsl(var(--top));
   inset-block-start: 3.75rem;
   inset-inline-end: 1rem;
-  max-inline-size: 12rem;
+  max-inline-size: 14rem;
   opacity: 0.9;
   padding: 1rem 1.5rem;
   position: absolute;
