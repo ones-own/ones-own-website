@@ -765,15 +765,18 @@
         />
       </div>
       <div data-name="audio" is="example">
-        <audio src="example.ogg" preload="none" controls>
-          Alternative content
+        <audio preload="none" controls>
+          <source src="example.mp3" type="audio/mpeg" />
+          <source src="example.ogg" type="audio/ogg" />
+          Alternative content <a href="example.mp3">download</a>
         </audio>
       </div>
       <div data-name="video" is="example">
         <video preload="none" width="480" height="270" controls>
           <source src="example.mp4" type="video/mp4" />
+          <source src="example.webm" type="video/webm" />
           <track src="example.vtt" default kind="captions" srclang="en" />
-          Fallback content
+          Alternative content <a href="example.mp4">download</a>
         </video>
       </div>
       <h4>Embedded Content</h4>
@@ -867,7 +870,7 @@
         <canvas id="canvas" width="100" height="100">
           Alternative content
         </canvas>
-        <script type="module">
+        <script>
           const canvas = document.querySelector("canvas");
           const ctx = canvas.getContext("2d");
           ctx.fillStyle = "green";
@@ -878,7 +881,7 @@
         <noscript id="noscript">
           <p>No script content</p>
         </noscript>
-        <script type="module">
+        <script>
           const noscript = document.querySelector("noscript");
           noscript.after("Script content");
         </script>
