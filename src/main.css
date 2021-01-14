@@ -879,7 +879,7 @@ section[is="hero"] {
   background-image: linear-gradient(
     to bottom,
     hsl(var(--background)),
-    hsl(var(--elevated)) 100%
+    hsl(var(--elevated))
   );
   padding: 2rem 1.5rem 4rem 1.5rem;
   position: relative;
@@ -887,7 +887,11 @@ section[is="hero"] {
 
   &::before,
   &::after {
-    background-color: hsl(var(--sunken));
+    background-image: linear-gradient(
+      to top,
+      hsl(var(--sunken)),
+      hsl(var(--drop))
+    );
     content: "";
     display: none;
     inset-block-end: 0;
