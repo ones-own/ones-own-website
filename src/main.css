@@ -952,6 +952,7 @@ section[is="hero"] {
   & > h2 {
     font-family: Hoefler, serif;
     font-size: 1.73em;
+    font-style: italic;
     font-weight: 400;
     margin-block-end: 3rem;
     margin-inline: auto;
