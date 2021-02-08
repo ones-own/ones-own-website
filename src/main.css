@@ -1,5 +1,5 @@
 /**
- * Fonts 
+ * Fonts
  */
 
 @font-face {
@@ -519,7 +519,7 @@ a {
 }
 
 /**
- * Specifics 
+ * Specifics
  */
 
 /* Be Part */
@@ -733,6 +733,10 @@ p[is="dark-mode-info"] {
   @media (prefers-reduced-motion) {
     animation-duration: 0s;
   }
+
+  @media (min-width: 30rem) {
+    inset-block-start: 5.25rem;
+  }
 }
 
 /* Design system */
@@ -856,18 +860,20 @@ header[role="banner"] {
   position: relative;
 
   & > a {
-    display: flex;
+    display: block;
 
-    & > span {
-      background-color: hsl(var(--logo));
-      color: hsl(var(--logo-text));
-      display: block;
-      flex-shrink: 0;
-      padding: 0.75rem 1rem;
+    & > svg {
+      block-size: auto;
+      inline-size: 6rem;
+    }
+  }
 
-      & + span {
-        background-color: hsl(var(--logo-secondary));
-        margin-inline: 0.125rem;
+  @media (min-width: 30rem) {
+    padding-block-start: 2rem;
+
+    & > a {
+      & > svg {
+        inline-size: 8rem;
       }
     }
   }

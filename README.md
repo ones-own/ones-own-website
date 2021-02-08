@@ -1,6 +1,6 @@
-# One's Own website
+# Kindly website
 
-The website and design system of One's Own.
+The website and design system of Kindly.
 
 ## Getting started
 

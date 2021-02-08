@@ -35,9 +35,8 @@
   --toggle-thumb-background: var(--wheat-2);
   --toggle-thumb-drop: var(--wheat-4);
   --toggle-thumb-inset: var(--wheat-1);
-  --logo: var(--grass-8);
-  --logo-secondary: var(--grass-5);
-  --logo-text: var(--wheat-1-06);
+  --logo: var(--grass-5);
+  --on-logo: var(--wheat-1-06);
   --tree-trunk: var(--grass-8);
   --tree-roots: var(--wheat-1);
   --icon: var(--grass-4);

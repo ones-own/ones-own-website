@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "ones-own-website",
+  "name": "kindly-website",
   "version": "0.0.0",
-  "description": "The website of One's Own",
+  "description": "The website of Kindly",
   "scripts": {
     "build": "parcel build src/*.html",
     "start": "parcel serve src/*.html",
