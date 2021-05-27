@@ -1,0 +1,23 @@
+section[is="be-part"] {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(var(--background)),
+    hsl(var(--sunken)) 80%
+  );
+  border-block-end: 1px solid hsl(var(--separator));
+  border-radius: 100% / 0 0 2rem 2rem;
+  margin-block-start: -2rem;
+  padding: 4rem 1rem 5rem;
+  text-align: center;
+
+  & > h2 {
+    font-size: 2em;
+    margin-block: 1em;
+    margin-inline: auto;
+  }
+
+  & > p {
+    margin-inline: auto;
+    max-inline-size: 32rem;
+  }
+}

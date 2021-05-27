@@ -1,0 +1,104 @@
+section[is="hero"] {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(var(--background)),
+    hsl(var(--elevated))
+  );
+  padding: 2rem 1.5rem 4rem;
+  position: relative;
+  text-align: center;
+
+  &::before,
+  &::after {
+    background-image: linear-gradient(
+      to top,
+      hsl(var(--sunken)),
+      hsl(var(--drop))
+    );
+    content: "";
+    display: none;
+    inset-block-end: 0;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    inset-inline-start: 0;
+    mask-position: 100%;
+    mask-repeat: no-repeat;
+    position: absolute;
+  }
+
+  &::before {
+    mask-image: url("assets/flock.svg");
+    mask-position: 50% 80%;
+    mask-size: 40%;
+
+    @media (min-width: 40em) {
+      display: block;
+    }
+
+    @media (min-width: 60em) {
+      mask-size: 30%;
+    }
+  }
+
+  &::after {
+    display: block;
+    inset-block-end: -0.25rem;
+    mask-image: url("assets/wildlife.svg");
+    mask-position: 6% 100%;
+    mask-size: 250%;
+
+    @media (min-width: 22em) {
+      mask-position: 0 100%;
+      mask-size: 200%;
+    }
+
+    @media (min-width: 40em) {
+      mask-position: 50% 100%;
+      mask-size: 140%;
+    }
+
+    @media (min-width: 80em) {
+      mask-size: contain;
+    }
+  }
+
+  & > h1 {
+    font-size: 2em;
+    margin-block: 0.48em;
+    margin-inline: auto;
+
+    @media (min-width: 24em) {
+      font-size: 2.5em;
+    }
+
+    @media (min-width: 28em) {
+      font-size: 3em;
+    }
+  }
+
+  & > h2 {
+    font-family: Hoefler, serif;
+    font-size: 1.73em;
+    font-style: italic;
+    font-weight: 400;
+    margin-block-end: 3rem;
+    margin-inline: auto;
+
+    @media (min-width: 24em) {
+      font-size: 2em;
+    }
+
+    @media (min-width: 28em) {
+      font-size: 2.5em;
+    }
+  }
+
+  @media (min-width: 28em) {
+    padding-block-end: 8rem;
+    padding-block-start: 4rem;
+  }
+
+  @media (min-width: 22em) {
+    padding-inline: 2rem;
+  }
+}

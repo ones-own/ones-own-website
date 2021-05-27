@@ -1,0 +1,28 @@
+a[is="promo"] {
+  background-color: hsl(var(--elevated));
+  border: 1px solid hsl(var(--separator));
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 0 0 hsl(var(--drop)), inset 0 1px 0 0 hsl(var(--inset));
+  color: hsl(var(--link));
+  display: block;
+  padding: 0.25rem 1.25rem;
+  text-decoration: none;
+
+  &:active {
+    box-shadow: none;
+    inset-block-start: 2px;
+    position: relative;
+  }
+
+  & > h4 {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  & > p {
+    color: hsl(var(--text));
+  }
+}

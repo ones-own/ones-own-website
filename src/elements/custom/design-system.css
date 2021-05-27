@@ -1,0 +1,10 @@
+body[is="design-system"] {
+  background-color: hsl(var(--ds-background));
+  padding-block-end: 1rem;
+
+  & > main {
+    margin-inline: auto;
+    max-inline-size: 32rem;
+    padding-inline: 1rem;
+  }
+}

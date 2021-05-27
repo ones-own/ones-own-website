@@ -15,6 +15,7 @@
   --accent-drop: var(--grass-3);
   --accent-inset: var(--grass-2);
   --on-accent: var(--wheat-1-06);
+  --command: var(--grass-4);
   --link: var(--sky-2);
   --visited: var(--violet-2);
   --active: var(--blood-2);
@@ -29,12 +30,9 @@
   --on-meta: var(--wheat-1-5);
   --error: var(--blood-6);
   --on-error: var(--wheat-1);
-  --toggle-track-background: var(--wheat-12);
-  --toggle-track-drop: var(--wheat-8);
-  --toggle-track-inset: var(--wheat-19);
-  --toggle-thumb-background: var(--grass-3);
-  --toggle-thumb-drop: var(--grass-5);
-  --toggle-thumb-inset: var(--grass-2);
+  --toggle-label: var(--grass-1-2);
+  --toggle-track: var(--wheat-12);
+  --toggle-thumb: var(--grass-3);
   --logo: var(--grass-3);
   --on-logo: var(--wheat-16);
   --tree-trunk: var(--grass-1-2);

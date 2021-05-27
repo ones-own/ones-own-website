@@ -1,0 +1,27 @@
+nav[is="menu"] {
+  block-size: 100%;
+
+  & > ul {
+    block-size: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-block: 0;
+    padding-inline-start: 0;
+
+    & > li {
+      align-items: center;
+      block-size: 100%;
+      display: flex;
+      min-inline-size: max-content;
+
+      & > a {
+        display: block;
+        font-weight: 700;
+        padding-block: 0.5rem;
+        padding-inline: 0.75rem;
+        text-decoration: none;
+      }
+    }
+  }
+}

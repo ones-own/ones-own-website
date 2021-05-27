@@ -1,0 +1,12 @@
+section[is="usps"] {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(var(--sunken)),
+    hsl(var(--background)) 70%
+  );
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 26rem));
+  padding: 5rem 1.5rem 1rem;
+  place-content: center;
+}
