@@ -1,0 +1,46 @@
+@keyframes fade-out {
+  0% {
+    opacity: 0.9;
+  }
+
+  60% {
+    transform: translateY(-0.25rem);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+p[is="dark-mode-info"] {
+  animation: 0.3s fade-out 5s ease-in forwards;
+  background-color: hsl(var(--top));
+  inset-block-start: 4rem;
+  inset-inline-end: 1rem;
+  max-inline-size: 14rem;
+  opacity: 0.9;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  transform: translateY(-0.25rem);
+  z-index: 2;
+
+  &::before {
+    background-color: hsl(var(--top));
+    block-size: 1.5rem;
+    clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
+    content: "";
+    inline-size: 1.5rem;
+    inset-block-start: calc((1.5rem - 1px) * -1);
+    inset-inline-end: 1.5rem;
+    position: absolute;
+  }
+
+  @media (prefers-reduced-motion) {
+    animation-duration: 0s;
+  }
+
+  @media (min-width: 30em) {
+    inset-block-start: 5rem;
+  }
+}

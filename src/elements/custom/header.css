@@ -1,0 +1,30 @@
+header[is="header"] {
+  align-items: center;
+  display: flex;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  margin-inline: auto;
+  max-inline-size: 60rem;
+  padding: 1rem;
+  position: relative;
+
+  & > a {
+    display: block;
+
+    & > svg {
+      block-size: auto;
+      inline-size: 6rem;
+    }
+  }
+
+  @media (min-width: 30em) {
+    padding-block-start: 2rem;
+
+    & > a {
+      & > svg {
+        inline-size: 8rem;
+      }
+    }
+  }
+}

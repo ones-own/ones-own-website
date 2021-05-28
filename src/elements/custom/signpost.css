@@ -1,0 +1,29 @@
+a[is="signpost"] {
+  font-size: 1.17em;
+  font-weight: 700;
+
+  &::after {
+    background-color: currentColor;
+    block-size: 0.75rem;
+    clip-path: polygon(
+      0 3%,
+      2% 0,
+      22% 0,
+      30% 2%,
+      100% 48%,
+      100% 52%,
+      30% 98%,
+      22% 100%,
+      2% 100%,
+      0 97%,
+      70% 52%,
+      70% 48%
+    );
+    content: "";
+    display: inline-block;
+    inline-size: 0.5rem;
+    line-height: 1;
+    margin-inline-start: 0.5rem;
+    text-decoration: none;
+  }
+}
