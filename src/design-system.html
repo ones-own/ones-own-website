@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <include src="./src/elements/custom/head.html"></include>
-    <script src="./elements/custom/table-of-contents.js" type="module"></script>
+    <include src="src/elements/custom/head.html"></include>
+    <script src="elements/custom/table-of-contents.js" type="module"></script>
     <meta
       name="description"
       content="Our instruction manual for building websites."
@@ -10,7 +10,7 @@
     <title>Design System - Kindly</title>
   </head>
   <body is="design-system">
-    <include src="./src/elements/custom/header.html"></include>
+    <include src="src/elements/custom/header.html"></include>
     <main>
       <h1>Design System</h1>
       <div is="table-of-contents"></div>
@@ -526,7 +526,7 @@
       <div data-name="figure" is="example">
         <figure>
           <img
-            src="./assets/example.jpg"
+            src="assets/example.jpg"
             alt="Example"
             width="500"
             height="333"
@@ -672,9 +672,9 @@
       </p>
       <div data-name="img" is="example">
         <img
-          src="./assets/example.jpg"
+          src="assets/example.jpg"
           alt="Example"
-          srcset="./assets/example.jpg 500w, ./assets/example-1500w.jpg 1500w"
+          srcset="assets/example.jpg 500w, assets/example-1500w.jpg 1500w"
           sizes="(max-width: 750px) 500px,
             1500px"
           width="1500"
@@ -684,22 +684,22 @@
       </div>
       <div data-name="audio" is="example">
         <audio preload="none" controls>
-          <source src="./assets/example.mp3" type="audio/mpeg" />
-          <source src="./assets/example.ogg" type="audio/ogg" />
-          Alternative content <a href="./assets/example.mp3">download</a>
+          <source src="assets/example.mp3" type="audio/mpeg" />
+          <source src="assets/example.ogg" type="audio/ogg" />
+          Alternative content <a href="assets/example.mp3">download</a>
         </audio>
       </div>
       <div data-name="video" is="example">
         <video preload="none" width="480" height="270" controls>
-          <source src="./assets/example.mp4" type="video/mp4" />
-          <source src="./assets/example.webm" type="video/webm" />
+          <source src="assets/example.mp4" type="video/mp4" />
+          <source src="assets/example.webm" type="video/webm" />
           <track
-            src="./assets/example.vtt"
+            src="assets/example.vtt"
             default
             kind="captions"
             srclang="en"
           />
-          Alternative content <a href="./assets/example.mp4">download</a>
+          Alternative content <a href="assets/example.mp4">download</a>
         </video>
       </div>
       <h4>Embedded Content</h4>
@@ -755,10 +755,10 @@
       </div>
       <div data-name="picture" is="example">
         <picture>
-          <source type="image/avif" srcset="./assets/example.avif" />
-          <source type="image/jpeg" srcset="./assets/example.jpg" />
+          <source type="image/avif" srcset="assets/example.avif" />
+          <source type="image/jpeg" srcset="assets/example.jpg" />
           <img
-            src="./assets/example.jpg"
+            src="assets/example.jpg"
             alt="Example"
             width="500"
             height="333"
@@ -1240,7 +1240,7 @@
         <em>forward</em> through content, but it's promoted in more detail than
         with the <em>signpost</em> element.
       </p>
-      <div is="example" style="background-color: hsl(var(--background))">
+      <div is="example">
         <a href="https://example.org/promo" is="promo">
           <h4 data-ignore="">Heading</h4>
           <p>Content</p>
@@ -1249,12 +1249,13 @@
       <h4>Content</h4>
       <h5>Call out</h5>
       <p>We use this element to call out content to customers.</p>
-      <div is="example" style="background-color: hsl(var(--background))">
-        <article is="call-out">
+      <div is="example">
+        <div is="call-out">
           <h4 data-ignore="">Heading</h4>
           <p>Content</p>
-        </article>
+        </div>
       </div>
+      <h4>Forms</h4>
       <h5>Hint</h5>
       <p>We use this element to provide input hints to customers.</p>
       <div is="example"><p is="hint">Hint</p></div>

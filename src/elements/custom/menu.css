@@ -21,6 +21,10 @@ nav[is="menu"] {
         padding-block: 0.5rem;
         padding-inline: 0.75rem;
         text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
