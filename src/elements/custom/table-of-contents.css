@@ -7,7 +7,6 @@ div[is="table-of-contents"] {
     padding: 0;
 
     & > li {
-      min-inline-size: 30rem;
       padding: 0.23em 0;
 
       &::before {
