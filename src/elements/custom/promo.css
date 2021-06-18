@@ -10,7 +10,7 @@ a[is="promo"] {
 
   &:active {
     box-shadow: none;
-    inset-block-start: 2px;
+    inset-block-start: 1px;
     position: relative;
   }
 
@@ -19,11 +19,7 @@ a[is="promo"] {
   }
 
   &:focus-visible {
-    & > h4 {
-      background-color: hsl(var(--focus));
-      box-shadow: 0px 0px 0px 4px hsl(var(--focus));
-      color: hsl(var(--on-focus));
-    }
+    box-shadow: 0 0 0 3px hsl(var(--focus)), 0 1px 0 0 hsl(var(--drop));
   }
 
   & > h4 {

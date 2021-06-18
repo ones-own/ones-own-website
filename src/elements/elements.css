@@ -24,6 +24,10 @@ body {
   max-inline-size: 90rem;
 }
 
+main {
+  padding-inline: 1rem;
+}
+
 h1,
 h2,
 h3,
@@ -371,7 +375,7 @@ button {
   background-color: hsl(var(--accent));
   border: none;
   border-radius: 0.25rem;
-  box-shadow: 0 2px 2px 0 hsl(var(--accent-drop));
+  box-shadow: 0 1px 0 0 hsl(var(--drop));
   color: hsl(var(--on-accent));
   font-family: inherit;
   font-size: inherit;
@@ -384,13 +388,13 @@ button {
   }
 
   &:focus-visible {
-    box-shadow: 0 2px 2px 0 hsl(var(--focus-drop));
+    box-shadow: 0 2px 2px 0 hsl(var(--drop));
     color: hsl(var(--on-focus));
   }
 
   &:active {
     box-shadow: none;
-    inset-block-start: 2px;
+    inset-block-start: 1px;
     position: relative;
   }
 }
