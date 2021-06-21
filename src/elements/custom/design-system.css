@@ -1,4 +1,12 @@
-main[is="design-system"] {
-  margin-inline: auto;
-  max-inline-size: 32rem;
+body[is="design-system"] {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(var(--background)),
+    hsl(var(--background-secondary)) 5%
+  );
+
+  & > main {
+    margin-inline: auto;
+    max-inline-size: 32rem;
+  }
 }

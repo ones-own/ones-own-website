@@ -2,6 +2,7 @@
   --text: var(--grass-1-2);
   --text-secondary: var(--wheat-2);
   --background: var(--wheat-16);
+  --background-secondary: var(--wheat-17);
   --elevated: var(--wheat-13);
   --sunken: var(--wheat-17);
   --drop: var(--wheat-19);
