@@ -1,11 +1,8 @@
-section[is="be-part"] {
-  background-image: linear-gradient(
-    to bottom,
-    hsl(var(--background)),
-    hsl(var(--sunken)) 80%
-  );
+section[is="latest-work"] {
   border-block-end: 1px solid hsl(var(--separator));
-  border-radius: 100% / 0 0 2rem 2rem;
+  border-radius: 100% / 0 0 4rem 4rem;
+  margin-inline: auto;
+  max-inline-size: 50rem;
   padding: 2rem 1rem 4rem;
   text-align: center;
 
@@ -15,12 +12,14 @@ section[is="be-part"] {
     margin-inline: auto;
   }
 
+  & > div {
+    margin-block: 2rem;
+    margin-inline: auto;
+    max-inline-size: 28rem;
+  }
+
   & > p {
     margin-inline: auto;
     max-inline-size: 32rem;
-
-    &:last-of-type {
-      margin-block-start: 2em;
-    }
   }
 }
