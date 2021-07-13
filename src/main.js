@@ -1,5 +1,10 @@
-document.addEventListener("colorschemechange", (e) => {
-  if (e.detail.colorScheme === "dark") {
+window.addEventListener("DOMContentLoaded", () => {
+  updatePlaypressImage();
+});
+
+document.addEventListener("colorschemechange", (event) => {
+  updatePlaypressImage();
+  if (event.detail.colorScheme === "dark") {
     const toggle = document.getElementById("dark-mode-toggle");
     const info = document.createElement("p");
     info.id = "dark-mode-info";
@@ -12,3 +17,14 @@ document.addEventListener("colorschemechange", (e) => {
     if (toggle) toggle.remove();
   }
 });
+
+function updatePlaypressImage() {
+  const darkModeToggle = document.querySelector("dark-mode-toggle");
+  const playpress = document.getElementById("playpress");
+  const source = playpress.querySelector("source");
+  const img = playpress.querySelector("img");
+
+  img.dataset.dark = source.srcset;
+  img.dataset.light = img.src;
+  img.src = img.dataset[darkModeToggle.mode];
+}
